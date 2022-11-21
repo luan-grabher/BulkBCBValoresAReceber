@@ -35,6 +35,6 @@ with open('lista.csv', 'r') as csvfile:
             repescagem = dates['repescagem']['inicio'] + ' até ' + dates['repescagem']['fim']
             textToFinalCSV += cpfOrCnpj + ';' + date + ';' + solicitar + ';' + repescagem + '\n'
     
-# write the final csv file with utf-8 encoding
-with open('final.csv', 'w', encoding='utf-8') as csvfile:
+# write the final csv file with encoding windows-1252
+with open('final.csv', 'w', encoding='windows-1252') as csvfile:
     csvfile.write(textToFinalCSV)
